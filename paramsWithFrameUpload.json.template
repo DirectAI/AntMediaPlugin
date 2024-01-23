@@ -1,0 +1,26 @@
+{
+    "downloadFramesToS3": true,
+    "s3Bucket": "sample-s3-bucket",
+    "s3AccessKey": "S3_ACCESS_KEY_HERE",
+    "s3SecretKey": "S3_SECRET_KEY_HERE",
+    "s3Path": "sample/internal/bucket/path",
+    "directaiClientId": "DIRECTAI_CLIENT_ID_HERE",
+    "directaiClientSecret": "DIRECTAI_CLIENT_SECRET_HERE",
+    "clientWebhook": "https://your.domain.here/endpoint_to_monitor",
+    "model_config": {
+        "detectors": [
+            {
+                "name": "hand",
+                "examples_to_include" : ["hand"],
+                "examples_to_exclude": ["person"],
+                "detection_threshold": 0.05
+            },
+            {
+                "name": "foot",
+                "examples_to_include" : ["foot"],
+                "examples_to_exclude": ["leg"],
+                "detection_threshold": 0.07
+            }
+        ]
+    }
+}
